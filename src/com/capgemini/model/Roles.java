@@ -17,6 +17,7 @@ public class Roles {
             while (sc.hasNextLine()) {
                 String[] i = sc.nextLine().split("=");
                 roles.add(new Role(i[0],i[1]).toString());
+                //System.out.println(Arrays.toString(i));
             }
         }
         catch (FileNotFoundException e) {
@@ -24,6 +25,6 @@ public class Roles {
         }
     }
     public void print(){
-        //System.out.println(roles.toString());
+       // System.out.println(roles.toString());
     }
 }

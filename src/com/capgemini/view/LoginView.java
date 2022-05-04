@@ -1,20 +1,25 @@
 package com.capgemini.view;
 
+import com.capgemini.model.Users;
+
 import java.util.Scanner;
 
 public class LoginView {
-    String username;
 
     public LoginView() {
+        Users users=new Users();
+
         System.out.println("User Name:");
         Scanner sc= new Scanner(System.in);
-        username=sc.nextLine();
+        String userID=sc.nextLine();
 
         System.out.println("Password:");
-        int password=sc.nextInt();
+        String Password=sc.nextLine();
+
+        users.checkUser(userID,Password);
     }
 
     public void print(){
-        System.out.println(username);
+        //System.out.println(username);
     }
 }
